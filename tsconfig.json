@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,     /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
+  },
+  "include": [
+    "node_modules/react-scripts",
+    "src"
+  ],
+  "exclude": [
+    "node_modules", "babel.config.js", "metro.config.ts", "jest.config.js", "react-app-env.d.ts", "src/@types/react-app-env.d.ts"
+  ]
+}
