@@ -1,66 +1,12 @@
-* {
-  box-sizing: border-box;
-}
+@charset "UTF-8";
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.titleList {
-  font-size: 25px;
-  font-family: Mulish;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px 10px 20px 20px;
-  background-size: 200% auto;
-  background-image: linear-gradient(to right, #141E30 0%, #243B55  51%, #141E30  100%);
-  box-shadow: 0 1px 10px #000;
-}
-
-.listContent {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  padding-top: 10px;
-  overflow: hidden auto;
-}
-
-.contentList {
-  background-color: rgba(255, 255, 255, .95);
-  border-radius: 20px;
-  height: 70vh;
-  min-width: 100vh;
-  max-width: 100vh; 
-  position: relative;
-}
-
-.flexOneCenter {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* CARREGAMENTO DE ICONES */
 @font-face {
   font-family: "untitled-font-1";
-  src:url("./assets/Icons/untitled-font-1.eot");
-  src:url("./assets/Icons/untitled-font-1.eot?#iefix") format("embedded-opentype"),
-    url("./assets/Icons/untitled-font-1.woff") format("woff"),
-    url("./assets/Icons/untitled-font-1.ttf") format("truetype"),
-    url("./assets/Icons/untitled-font-1.svg#untitled-font-1") format("svg");
+  src:url("untitled-font-1.eot");
+  src:url("untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("untitled-font-1.woff") format("woff"),
+    url("untitled-font-1.ttf") format("truetype"),
+    url("untitled-font-1.svg#untitled-font-1") format("svg");
   font-weight: normal;
   font-style: normal;
 

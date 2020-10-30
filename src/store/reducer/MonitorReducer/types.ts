@@ -4,6 +4,7 @@ export const SET_LOADING = 'MonitorReducer/SET_LOADING'
 export const SET_LIST_CAMERA = 'MonitorReducer/SET_LIST_CAMERA'
 
 export interface CameraProps {
+  id: number
   title: string
   hostAddress: string
 }

@@ -11,12 +11,3 @@
   align-items: center;
   background-color: rgba(0, 0, 0, .7);
 }
-
-.cntCameraList > span {
-  color: #ffffff;
-  font-size: 22px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
