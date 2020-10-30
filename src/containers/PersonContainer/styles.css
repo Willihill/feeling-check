@@ -1,0 +1,51 @@
+.container {    
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: url('https://i.pinimg.com/originals/57/2a/91/572a91b1de608f5af1151f6149744446.jpg') no-repeat;
+  justify-content: center;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, .7);
+  background-blend-mode: color-burn;
+}
+
+.logo span{
+  font-family: 'Lobster';
+  font-size: 100px;
+  color: #fff;
+}
+
+.options {
+  flex: 1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  padding-bottom: 150px;
+  flex-direction: column;
+}
+
+.lineOpt {
+  display: flex;
+}
+
+#optPerson {
+  background: url('https://i.pinimg.com/564x/79/cd/e4/79cde40d1111e46db9df5897b1995f4d.jpg') no-repeat center;
+}
+
+#optCamera {
+  background: url('https://i.pinimg.com/564x/06/e3/6b/06e36bb5994f035ce897b58444986fd7.jpg') no-repeat 80%;
+}
+
+#optMonitoring {
+  background: url('https://i.pinimg.com/564x/49/d4/79/49d4798e59de85adb5ed9d2615bd9ab8.jpg') no-repeat 100%;
+}
+
+#optReport {
+  background: url('https://i.pinimg.com/564x/93/80/06/938006736f7ffb45a79047028d131d35.jpg') no-repeat 100%;
+}
