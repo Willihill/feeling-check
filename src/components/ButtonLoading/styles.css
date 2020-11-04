@@ -1,0 +1,40 @@
+.cntBtnRd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+  background-size: 200% auto;
+  color: white;            
+  border-radius: 20px;
+  padding: 9px 0;
+  font-family: 'Mulish';
+  font-size: 13px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.cntBtnRd:hover {
+  transition: 0.5s;
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 3px 3px 8px gray;
+}
+
+.cntInputTxt span {
+  color: #000;
+  font-family: 'Mulish';
+  font-size: 14px;
+  user-select: none;
+}
+
+.cntInputTxt input {
+  text-decoration: none;
+  border: solid 1px #d9d9d9;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #000;
+  outline: none;
+  font-family: 'Mulish';
+}

@@ -1,6 +1,7 @@
 import {
   SET_LOADING,
   SET_LIST_CAMERA,
+  ADD_CAMERA_MONITOR,
   MonitorState,
   ActionType
 } from './types'
@@ -17,6 +18,8 @@ export default (state: MonitorState = initialState, { type, payload }: ActionTyp
       return { ...state, loading: payload }
     case SET_LIST_CAMERA:
       return { ...state, listCamera: payload }
+    case ADD_CAMERA_MONITOR:
+      return { ...state, listCamera: [...state.listCamera, payload] }
     default:
       return state
   }

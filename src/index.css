@@ -43,6 +43,8 @@ code {
   min-width: 100vh;
   max-width: 100vh; 
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .flexOneCenter {

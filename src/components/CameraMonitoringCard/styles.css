@@ -1,0 +1,54 @@
+.cntCamMonitCard {
+  /* padding: 20px;   */
+  /* border: solid 2px rgba(0, 0, 0, 0.54); */
+  border: solid 1px #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.cntCameraCard:hover {
+  transition: linear 0.4s;
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  transform: scale(1.01);
+}
+
+.cntCamMonitCard > header {
+  padding: 5px 20px;
+}
+
+.titleCamMonitCard {
+  color: #fff;
+  font-size: 13px;
+  font-family: 'Mulish';
+}
+
+.imgCamMonit{
+  width: 100%;
+  height: 100%;
+}
+
+.cntCamMonitCard > section {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cntCamMonitCard > section .icon-exclamation-triangle{
+  color: #fff;
+  font-size: 50px;
+}
+
+.noSinalCamera {
+  font-family: 'Mulish';
+  color: #fff;
+  font-size: 17px;
+}
