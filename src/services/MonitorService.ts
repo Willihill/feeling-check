@@ -2,9 +2,8 @@ import { Dispatch } from 'redux'
 import { ApplicationState } from '../store/reducer'
 import { setLoadingAddCameraAction } from '../store/reducer/AddCameraReducer/actions'
 import { setListCameraAction, setLoadingMonitorAction } from '../store/reducer/MonitorReducer/actions'
-import { CameraProps } from '../store/reducer/MonitorReducer/types'
 import { asyncPromise } from '../utils/helpers/promise'
-import { postCameraService } from './api/CameraService'
+import { getCameraService, postCameraService } from './api/CameraService'
 
 export const getCamerasService = () => {
   return async (dispatch: Dispatch, getState: () => ApplicationState) => {
@@ -13,28 +12,32 @@ export const getCamerasService = () => {
     if (MonitorReducer.loading) return
 
     dispatch(setLoadingMonitorAction(true))
+    const { data } = await getCameraService()
 
-    setTimeout(() => {
-      const cameras: CameraProps[] = [
-        {
-          id: 1,
-          title: 'Camera 1',
-          hostAddress: 'http://192.168.0.100:8080'
-        },
-        {
-          id: 2,
-          title: 'Camera 2',
-          hostAddress: 'http://192.168.0.101:8080'
-        },
-        {
-          id: 3,
-          title: 'Camera 3',
-          hostAddress: 'http://192.168.0.100:8080'
-        }
-      ]
-      dispatch(setListCameraAction(cameras))
-      dispatch(setLoadingMonitorAction(false))
-    }, 50)
+    dispatch(setListCameraAction(data.cameras))
+    dispatch(setLoadingMonitorAction(false))
+
+    // setTimeout(() => {
+    //   const cameras: CameraProps[] = [
+    //     {
+    //       id: 1,
+    //       title: 'Camera 1',
+    //       hostAddress: 'http://192.168.0.100:8080'
+    //     },
+    //     {
+    //       id: 2,
+    //       title: 'Camera 2',
+    //       hostAddress: 'http://192.168.0.101:8080'
+    //     },
+    //     {
+    //       id: 3,
+    //       title: 'Camera 3',
+    //       hostAddress: 'http://192.168.0.100:8080'
+    //     }
+    //   ]
+    //   dispatch(setListCameraAction(cameras))
+    //   dispatch(setLoadingMonitorAction(false))
+    // }, 50)
   }
 }
 

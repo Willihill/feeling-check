@@ -38,10 +38,10 @@ export default () => {
                 <div className='listContent'>
                   {MonitorReducer.listCamera.map(item => (
                     <CameraCard
-                      key={item.id}
-                      id={item.id}
+                      key={item._Id}
+                      id={item._Id}
                       title={item.title}
-                      addressHost={item.hostAddress}
+                      addressHost={item.ip}
                     />
                   ))}
                 </div>

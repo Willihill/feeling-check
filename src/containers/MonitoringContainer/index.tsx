@@ -22,10 +22,10 @@ export default () => {
       <div className='cntCameraMonit'>
         {MonitorReducer.listCamera.map(item => (
           <CameraMonitoringCard
-            key={item.id}
-            id={item.id}
+            key={item._Id}
+            id={item._Id}
             title={item.title}
-            addressHost={item.hostAddress}
+            addressHost={item.ip}
           />
         ))}
       </div>

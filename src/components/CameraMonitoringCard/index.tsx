@@ -13,7 +13,10 @@ export default ({ title, id, addressHost }: CameraMonitoringCardProps) => {
   var intervalCheckSinal: NodeJS.Timeout
 
   useEffect(() => {
-    interval = setInterval(() => onCaptureImage(), 60000)
+    interval = setInterval(() => {
+      onCaptureImage()
+      clearInterval(interval)
+    }, 2000)
     intervalCheckSinal = setInterval(() => onCheckSinal(), 10000)
 
     return () => {

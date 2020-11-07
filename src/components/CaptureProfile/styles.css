@@ -1,0 +1,26 @@
+.cntCaptureProfile {
+  width: 200px;
+  height: 250px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.btnCapture {
+  position: absolute;
+  bottom: 0;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, .5);
+  padding: 8px 0 4px 0;
+  color: #000;
+  width: 100%;
+  font-size: 20px;
+}
+
+.videProfile{
+  flex: 1;
+}

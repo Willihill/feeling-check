@@ -5,9 +5,9 @@ export const SET_LIST_CAMERA = 'MonitorReducer/SET_LIST_CAMERA'
 export const ADD_CAMERA_MONITOR = 'MonitorReducer/ADD_CAMERA_MONITOR'
 
 export interface CameraProps {
-  id: number
+  _Id: number
   title: string
-  hostAddress: string
+  ip: string
 }
 
 export interface MonitorState {

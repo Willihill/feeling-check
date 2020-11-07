@@ -36,6 +36,17 @@ code {
   overflow: hidden auto;
 }
 
+.listContentHorizontal {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  padding-top: 10px;
+  overflow: hidden auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .contentList {
   background-color: rgba(255, 255, 255, .95);
   border-radius: 20px;
@@ -54,6 +65,10 @@ code {
   align-items: center;
 }
 
+.heightSpacing {
+  display: flex;
+  height: 20px;
+}
 
 /* CARREGAMENTO DE ICONES */
 @font-face {

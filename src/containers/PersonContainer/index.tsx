@@ -1,26 +1,58 @@
-import React from 'react'
-
-import ButtonHome from '../../components/ButtonHome'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { Outlet, useNavigate } from 'react-router-dom'
+import ButtonAdd from '../../components/ButtonAdd'
+import PersonCard from '../../components/PersonCard'
+import { getPersonsService } from '../../services/PersonService'
+import { ApplicationState } from '../../store/reducer'
 
 import './styles.css'
 
 export default () => {
+  const { PersonReducer } = useSelector((state: ApplicationState) => state)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    dispatch(getPersonsService())
+  }, [])
+
+  const onPressAdd = () => navigate('add')
+  const onPressClose = () => navigate('/')
+
   return (
-    <div className='container'>
-      <div className='logo'>
-        <span>Feeling Check</span>
+    <div className='cntCameraList'>
+      <span className='icon-close-round' onClick={onPressClose} />
+      <div className='contentList'>
+        <div className='titleList'>
+          <span>lista de pessoas</span>
+        </div>
+
+        <div className='flexOneCenter'>
+          {PersonReducer.loading
+            ? (
+              <span>Carregando pessoas</span>
+            )
+            : (
+              <>
+                <div className='listContentHorizontal'>
+                  {PersonReducer.listPerson.map((item, idx) => (
+                    <PersonCard
+                      key={idx}
+                      name={item.name}
+                      profile={item.imageFace}
+                    />
+                  ))}
+                </div>
+                <ButtonAdd
+                  onPress={onPressAdd}
+                />
+              </>
+            )}
+        </div>
       </div>
 
-      <div className='options'>
-        <div className='lineOpt'>
-          <ButtonHome pathRouter='person' text='Pessoas' id='optPerson' />
-          <ButtonHome pathRouter='camera' text='Cameras' id='optCamera' />
-        </div>
-        <div className='lineOpt'>
-          <ButtonHome pathRouter='monitoring' text='Monitoramento' id='optMonitoring' />
-          <ButtonHome pathRouter='report' text='Relatorio' id='optReport' />
-        </div>
-      </div>
+      <Outlet />
     </div>
   )
 }
