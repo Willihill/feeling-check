@@ -7,6 +7,7 @@ import PersonContainer from './containers/PersonContainer'
 import AddCameraContainer from './containers/AddCameraContainer'
 import MonitoringContainer from './containers/MonitoringContainer'
 import AddPersonContainer from './containers/AddPersonContainer'
+import ReportContainer from './containers/ReportContainer'
 
 export default () => (
   <Router>
@@ -20,6 +21,7 @@ export default () => (
         </Route>
       </Route>
       <Route path='/monitoring' element={<MonitoringContainer />} />
+      <Route path='/report' element={<ReportContainer />} />
     </Routes>
   </Router>
 )

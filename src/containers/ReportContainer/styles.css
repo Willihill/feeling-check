@@ -1,0 +1,67 @@
+.cntReport {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: url('https://i.pinimg.com/originals/57/2a/91/572a91b1de608f5af1151f6149744446.jpg') no-repeat;
+  flex-direction: column;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, .7);
+  background-blend-mode: color-burn;
+}
+
+.headerReport {
+  height: 40%;
+  background-color: rgba(0, 0, 0, .7);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerReport canvas {
+  width: 1000px;
+  height: 380px !important;
+}
+
+.cntEmotions {
+  flex: 1;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cntFilters {
+  margin-top: -5px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.cntFilter {
+  background-color: #0edcf3;
+  margin-right: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.cntFilter  label {
+  font-size: 13px;
+  font-family: 'Mulish';
+  text-shadow: 2px 2px 3px #000;
+  margin-bottom: 5px;
+}
+
+.cntFilter  input {
+  font-size: 12px;
+  font-family: 'Mulish';
+  padding: 4px 2px;
+  width: 160px;
+}
