@@ -15,8 +15,8 @@ export default ({ title, id, addressHost }: CameraMonitoringCardProps) => {
   useEffect(() => {
     interval = setInterval(() => {
       onCaptureImage()
-      clearInterval(interval)
-    }, 2000)
+      // clearInterval(interval)
+    }, 60000)
     intervalCheckSinal = setInterval(() => onCheckSinal(), 10000)
 
     return () => {
@@ -40,10 +40,12 @@ export default ({ title, id, addressHost }: CameraMonitoringCardProps) => {
 
           const imageBase64 = reader.result?.toString().substring(startBase64 + 7)
 
+          const date = new Date()
+          date.setHours(date.getHours() - 3)
           postIdentificationService({
             cameraId: id,
             image: imageBase64 as string,
-            capturedAt: new Date().toISOString()
+            capturedAt: date.toISOString()
           })
         }
 

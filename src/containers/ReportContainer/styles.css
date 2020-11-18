@@ -65,3 +65,17 @@
   padding: 4px 2px;
   width: 160px;
 }
+
+.refreshReport {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.cntList {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  flex-wrap: wrap;
+}

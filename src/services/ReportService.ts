@@ -31,7 +31,7 @@ export const getDataLineChartService = () => {
 
     const ajustaData = (date: string): Date => {
       const d = new Date(date)
-      d.setHours(d.getUTCHours())
+      // d.setHours(d.getUTCHours())
       return d
     }
 
@@ -71,7 +71,9 @@ export const getDataLineChartService = () => {
 
     dates.map(item => {
       if (datesIgnore.includes(item)) return null
-      const dateMinFilterSon = dateToDateGroup(item)
+      console.log('item: ', item)
+      const dateMinFilterSon = dateToDateGroup(new Date(item))
+      console.log('datemin: ', dateMinFilterSon)
       const filhos = dates.filter(son => dateToDateGroup(son).toISOString() === dateMinFilterSon.toISOString())
 
       // Seta a data minima na lista de datas agrupadas

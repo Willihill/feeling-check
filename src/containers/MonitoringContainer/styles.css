@@ -4,14 +4,14 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: url('https://media.istockphoto.com/photos/blue-geometric-shape-abstract-technology-background-picture-id906577952?k=6&m=906577952&s=612x612&w=0&h=Ki8p07QLt6SbARRj-jQ_mn7c1WDomhRW15MOplDDBg4=') no-repeat;
+  background: url('https://i.pinimg.com/originals/57/2a/91/572a91b1de608f5af1151f6149744446.jpg') no-repeat;
   justify-content: center;
   padding: 20px 0;
   flex-direction: column;
   align-items: center;
   background-size: 100% 100%;
   background-attachment: fixed;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, .9);
   background-blend-mode: color-burn;
 }
 
